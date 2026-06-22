@@ -7,6 +7,7 @@ const algoSelector = document.getElementById("algo-selector");
 const visualiseBtn = document.getElementById("sorting-btn");
 const stepsDisplay = document.getElementById("sorting-steps-process");
 const finalOutput  = document.getElementById("final-output-msg");
+const clearBtn = document.getElementById("clear-btn");
 
 // SECTION B — ALGORITHM CONFIG
 
@@ -232,9 +233,20 @@ function handleVisualise() {
 // Button click
 visualiseBtn.addEventListener("click", handleVisualise);
 
-// Enter key — input box mein Enter dabao, button ki zarurat nahi
+// Enter key — in input box
 inputBox.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         handleVisualise();
     }
 });
+
+// Clear all function calls
+clearBtn.addEventListener("click", clearAll);
+
+// SECTION H - CLEAR ALL
+function clearAll(){
+    inputBox.value = "";
+    stepsDisplay.innerHTML = "No visualisation generated yet. Enter number and click Visualise Sorting.";
+    finalOutput.innerHTML = "Final Output Array will be displayed here.";
+    inputBox.focus();
+}
