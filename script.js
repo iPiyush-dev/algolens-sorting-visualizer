@@ -158,7 +158,7 @@ function displaySteps(stepsArray) {
 
     let html = stepsArray.map(function(step, index) {
         return "<p class='step-item'>"
-             + "<span class='step-number'>Step " + (index + 1) + "</span> "
+             + "<span class='step-number' style = 'color:#6E6AE8;'>Step " + (index + 1) + "</span> "
              + step
              + "</p>";
     }).join("");
@@ -168,7 +168,7 @@ function displaySteps(stepsArray) {
 
 // Show final sorted array
 function displayFinalOutput(sortedArray) {
-    finalOutput.innerHTML = "[ " + sortedArray.join(", ") + " ]";
+    finalOutput.innerHTML = "<span style = 'color: #30D158; font-weight:600;'>[ " + sortedArray.join(", ") + " ]";
 }
 
 // Show error messages
@@ -200,6 +200,15 @@ function handleVisualise() {
 
     // 4. Disable the button and start processing
     setLoadingState(true);
+
+    // If array is already sorted
+
+    let testSorted = [...numbersArray].sort(function(a,b){return a-b;});
+    let alreadySorted = numbersArray.join(",")===testSorted.join(",");
+    if(alreadySorted){
+        displayError("Array is already sorted!");
+        return;
+    }
 
     // 5. Run Algorithm
     let result = runAlgorithm(algorithmName, numbersArray);
