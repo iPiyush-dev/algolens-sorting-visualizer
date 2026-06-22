@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-card {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    /* padding: 10px 1px; */
+    width: 400px;
+    max-width: 90%;
+    border-radius: 16px;
+}
+
+.main-card>h2 {
+    color: black;
+    letter-spacing: 0.1rem;
+}
+
+.main-card>p {
+    color: #86868B;
+    letter-spacing: .2rem;
+}
+
+.common-class-properties {
+    margin: 20px 20px;
+    padding: 10px 20px;
+    background-color: #F5F5F7;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.10);
+    border-radius: 15px;
+}
+
+.input-place {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-place h3 {
+    color: #1D1D1F;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    margin-bottom: 5px;
+}
+
+#input-box {
+    color: #86868B;
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#input-box:focus {
+    border: 2px solid rgba(0, 0, 0, .30);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+}
+
+.algorithm-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.algorithm-selector label {
+    color: #1D1D1F;
+    margin-bottom: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.algorithm-selector>select {
+    color: #1D1D1F;
+    outline: none;
+    padding: 4px 8px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.algorithm-selector>select:focus {
+    border: 2px solid rgba(0, 0, 0, .30);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.10);
+    box-sizing: border-box;
+}
+
+.algorithm-selector>select>option {
+    color: #86868B;
+}
+
+.sorting-button {
+    margin: 10px 40px;
+    border-radius: 15px;
+}
+
+#sorting-btn {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #0071E3;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    transition: background-color 0.2s ease, transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
+}
+
+#sorting-btn:hover {
+    background-color: #0077ED;
+}
+
+#sorting-btn:focus-visible {
+    box-shadow: 1px 1px 4px rgba(0, 113, 227, 0.3);
+}
+
+#sorting-btn:active {
+    transform: scale(0.98);
+    background-color: #0066CC;
+}
+
+.sorting-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sorting-steps>h4 {
+    color: #1D1D1F;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.sorting-steps>div {
+    color: #86868B;
+}
+
+.output-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.output-box>h4 {
+    color: #1D1D1F;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.output-box>p{
+    color: #86868B;
+}
