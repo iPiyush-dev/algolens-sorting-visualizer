@@ -125,41 +125,49 @@ const arr = [12, 11, 13, 5, 6, 7];
 console.log(heapSort(arr)); 
 
 //Quick Sort
-function quickSort(arr, low = 0, high = arr.length - 1) {
-    if (low < high) {
-        const pivotIndex = partition(arr, low, high);
-        console.log(
-            `Pivot placed at ${pivotIndex}:`,
-            [...arr]
-        );
-        quickSort(arr, low, pivotIndex - 1);
-        quickSort(arr, pivotIndex + 1, high);
-    }
-    return arr;
-}
-function partition(arr, low, high) {
-    const pivot = arr[high];
-    console.log(`\nPivot = ${pivot}`);
-    let i = low - 1
-    for (let j = low; j < high; j++) {
-        if (arr[j] < pivot) {
-            i++;
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-
-            console.log(
-                `Swap ${arr[i]} and ${arr[j]}:`,
-                [...arr]
-            );
+function quickSortSteps(arr) {
+    let a = [...arr];
+    let b = [];
+    function quickSort(low, high) {
+        if (low < high) {
+            const pivotIndex = partition(low, high);
+            b.push({
+                type: "pivotPlaced",
+                pivotIndex,
+                array: [...a]
+            });
+            quickSort(low, pivotIndex - 1);
+            quickSort(pivotIndex + 1, high);
         }
     }
-    [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
-    console.log(
-        `Move pivot to correct position:`,
-        [...arr]
-    );
-    return i + 1;
+    function partition(low, high) {
+        const pivot = a[high];
+        b.push({
+            type: "pivot",
+            pivot,
+            array: [...a]
+        });
+        let i = low - 1;
+        for (let j = low; j < high; j++) {
+            if (a[j] < pivot) {
+                i++;
+                [a[i], a[j]] = [a[j], a[i]];
+                b.push({
+                    type: "swap",
+                    swapped: [a[i], a[j]],
+                    array: [...a]
+                });
+            }
+        }
+        [a[i + 1], a[high]] = [a[high], a[i + 1]];
+        b.push({
+            type: "movePivot",
+            array: [...a]
+        });
+        return i + 1;
+    }
+    quickSort(0, a.length - 1);
+    return b;
 }
-const arr = [10, 7, 8, 9, 1, 5];
-console.log("Initial:", [...arr]);
-quickSort(arr);
-console.log("\nSorted:", arr);
+const b = quickSortsteps([10, 7, 8, 9, 1, 5]);
+console.log(b);
