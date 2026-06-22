@@ -43,7 +43,7 @@ const ALGO_CONFIG = {
             let stepsRaw = quickSortSteps([...arr]);
             let steps = stepsRaw.map(function(obj){
                 return "[" + obj.array.join(",") + "]";})
-            let sorted = stepaRaw[stepsRaw.length-1].array;
+            let sorted = stepsRaw[stepsRaw.length-1].array;
             return {steps: steps, sorted: sorted};
         },  
         type: "pre-processed"
