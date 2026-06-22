@@ -38,7 +38,7 @@ const ALGO_CONFIG = {
     },
 
     "quick-sort": {
-        fn:   quickSort,
+        fn:   quickSortSteps,
         type: "sorted-only"
     }
 };

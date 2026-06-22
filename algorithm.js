@@ -15,7 +15,7 @@ function insertionSort(arr){
     }
     return steps;
 }
-console.log(insertionSort([7,8,9,4,3,1]))
+// console.log(insertionSort([7,8,9,4,3,1]))
 
 //Selection Sort
 function selectionSort(arr){
@@ -35,7 +35,7 @@ function selectionSort(arr){
     }
     return b;
 }
-console.log(selectionSort([9,4,1,2,3,6]));
+// console.log(selectionSort([9,4,1,2,3,6]));
 
 //Bubble Sort
 function bubbleSort(arr){
@@ -51,7 +51,7 @@ function bubbleSort(arr){
     }
     return b;
 }
-console.log(bubbleSort([6,4,7,2,1]))
+// console.log(bubbleSort([6,4,7,2,1]))
 
 //Merge Sort
 function mergeSort(arr){
@@ -80,7 +80,7 @@ function merge(left,right){
         .concat(left.slice(i))
         .concat(right.slice(j));
 }
-console.log(mergeSort([3,4,2,1,5,0]))
+// console.log(mergeSort([3,4,2,1,5,0]))
 
 //Heap Sort
 function heapSort(arr) {
@@ -122,7 +122,7 @@ function heapify(arr, heapSize, root) {
     }
 }
 const arr = [12, 11, 13, 5, 6, 7];
-console.log(heapSort(arr)); 
+// console.log(heapSort(arr)); 
 
 //Quick Sort
 function quickSortSteps(arr) {
@@ -169,5 +169,5 @@ function quickSortSteps(arr) {
     quickSort(0, a.length - 1);
     return b;
 }
-const b = quickSortsteps([10, 7, 8, 9, 1, 5]);
-console.log(b);
+const b = quickSortSteps([10, 7, 8, 9, 1, 5]);
+// console.log(b);
