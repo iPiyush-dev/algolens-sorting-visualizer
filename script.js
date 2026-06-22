@@ -104,8 +104,10 @@ function processResult(rawResult, configType, originalArray) {
 
         return { steps: steps, sorted: sorted };
     }
-
-    if (configType === "sorted-only") {
+     if (configType === "pre-processed") {
+        return rawResult;
+     }
+    else if (configType === "sorted-only") {
         return {
             steps:  ["This algorithm does not expose step-by-step data yet. Showing final result only."],
             sorted: rawResult
