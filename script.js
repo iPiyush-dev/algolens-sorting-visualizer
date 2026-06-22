@@ -38,7 +38,12 @@ const ALGO_CONFIG = {
     },
 
     "quick-sort": {
-        fn:   quickSortSteps,
+        fn: function(arr){
+            quickSortSteps([...arr]);
+            return[...arr].sort(function(a,b){
+                return a-b;
+            });
+        },  
         type: "sorted-only"
     }
 };
