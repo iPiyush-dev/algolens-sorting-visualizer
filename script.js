@@ -39,12 +39,13 @@ const ALGO_CONFIG = {
 
     "quick-sort": {
         fn: function(arr){
-            quickSortSteps([...arr]);
-            return[...arr].sort(function(a,b){
-                return a-b;
-            });
+            let stepsRaw = quickSortSteps([...arr]);
+            let steps = stepsRaw.map(function(obj){
+                return "[" + obj.array.join(",") + "]";})
+            let sorted = stepaRaw[stepsRaw.length-1].array;
+            return {steps: steps, sorted: sorted};
         },  
-        type: "sorted-only"
+        type: "pre-processed"
     }
 };
 
