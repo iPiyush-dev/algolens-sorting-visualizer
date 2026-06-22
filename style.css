@@ -16,7 +16,8 @@ body {
 
 .main-card {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-    /* padding: 10px 1px; */
+    max-height: 95vh;
+    overflow-y: auto;
     width: 400px;
     max-width: 90%;
     border-radius: 16px;
@@ -133,10 +134,46 @@ body {
     background-color: #0066CC;
 }
 
+.clear-button{
+    margin: 0px 40px 10px 40px;
+    border-radius: 15px;
+}
+
+#clear-btn {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #FF3B30;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    transition: background-color 0.2s ease, transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
+}
+
+#clear-btn:hover {
+    background-color: #FF453A;
+}
+
+#clear-btn:focus-visible {
+     background-color: #FF3B30;
+    box-shadow: 1px 1px 4px rgba(255, 68, 39, 0.3);
+}
+
+#clear-btn:active {
+    transform: scale(0.98);
+    background-color: #E0342A;
+}
+
 .sorting-steps {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .sorting-steps>h4 {
