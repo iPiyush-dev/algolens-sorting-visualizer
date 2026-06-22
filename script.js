@@ -245,7 +245,7 @@ clearBtn.addEventListener("click", clearAll);
 
 // SECTION H - CLEAR ALL
 function clearAll(){
-    inputBox.value = "";
+    inputBox.value = " ";
     stepsDisplay.innerHTML = "No visualisation generated yet. Enter number and click Visualise Sorting.";
     finalOutput.innerHTML = "Final Output Array will be displayed here.";
     inputBox.focus();
