@@ -5,7 +5,7 @@
 const inputBox     = document.getElementById("input-box");
 const algoSelector = document.getElementById("algo-selector");
 const visualiseBtn = document.getElementById("sorting-btn");
-const stepsDisplay = document.getElementById("sorting-steps-msg");
+const stepsDisplay = document.getElementById("sorting-steps-process");
 const finalOutput  = document.getElementById("final-output-msg");
 
 // SECTION B — ALGORITHM CONFIG
